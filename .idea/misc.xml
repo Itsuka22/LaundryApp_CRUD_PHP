@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable-v24/bg_btn_auth_color_white.xml" value="0.15" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable/bg_btn_auth_primary.xml" value="0.2712820512820513" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable/bg_edit_text.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable/ic_add.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_sign_up.xml" value="0.23777173913043478" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_splash.xml" value="0.2318840579710145" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_tambah.xml" value="0.2" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_ubah.xml" value="0.2318840579710145" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/card_item.xml" value="0.536" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

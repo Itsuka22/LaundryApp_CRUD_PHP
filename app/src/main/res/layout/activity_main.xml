@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/srl_data"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/large_250"
+            android:paddingTop="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user"
+                android:layout_width="47dp"
+                android:layout_height="48dp"
+                android:layout_margin="@dimen/normal_100"
+                android:src="@drawable/profil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_view_welcome_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_75"
+                android:text="@string/selamat_datang"
+                app:layout_constraintBottom_toTopOf="@id/tv_name_user"
+                app:layout_constraintStart_toEndOf="@id/iv_user"
+                app:layout_constraintTop_toTopOf="@id/iv_user"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <!--            <EditText-->
+<!--                android:id="@+id/et_search_material"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:background="@drawable/bg_search"-->
+<!--                android:hint="@string/search"-->
+<!--                android:paddingStart="@dimen/normal_100"-->
+<!--                android:paddingEnd="@dimen/normal_100"-->
+<!--                android:layout_marginStart="@dimen/normal_100"-->
+<!--                android:layout_marginEnd="@dimen/normal_100"-->
+<!--                android:elevation="@dimen/small_50"-->
+<!--                android:layout_marginTop="@dimen/normal_250"-->
+<!--                android:drawableTint="@android:color/darker_gray"-->
+<!--                android:inputType="text"-->
+<!--                android:imeOptions="actionSearch"-->
+<!--                android:drawableEnd="@drawable/ic_baseline_search_24"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/text_view_tag_line"/>-->
+
+            <TextView
+                android:id="@+id/tv_name_user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_100"
+                android:text="@string/username"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h5"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/iv_user"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/text_view_welcome_home"
+                app:layout_constraintTop_toBottomOf="@id/text_view_welcome_home"
+                tools:text="My Name" />
+
+            <TextView
+                android:id="@+id/text_view_your_materials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_100"
+                android:layout_marginTop="55dp"
+                android:text="Daftar Laundry : "
+                android:textColor="@color/black"
+                android:textSize="@dimen/h5"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_user" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_data"
+                android:layout_width="match_parent"
+                android:layout_height="632dp"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/small_100"
+                android:paddingEnd="@dimen/small_100"
+                android:paddingBottom="@dimen/small_100"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/fab_tambah"
+                tools:layout_editor_absoluteX="0dp"
+                tools:listitem="@layout/card_item" />
+
+            <ProgressBar
+                android:id="@+id/pb_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/rv_data"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_tambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="112dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:clickable="true"
+                android:src="@drawable/ic_add_white"
+                android:tint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.884"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            <ImageView-->
+<!--                android:id="@+id/iv_no_data"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/image_no_data"-->
+<!--                android:elevation="@dimen/small_50"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_marginTop="@dimen/normal_100"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/text_view_your_materials"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"/>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
