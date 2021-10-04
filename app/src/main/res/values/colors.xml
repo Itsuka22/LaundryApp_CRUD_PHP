@@ -12,5 +12,15 @@
     <color name="colorPrimaryLight">#7BD588</color>
 
 
+    //onboarding colors
+    <color name="background">#F0F4F3</color>
+    <color name="buttontext">#50C2C9</color>
+
+    //indicator color
+    <color name="inactive">#FFFFFF</color>
+    <color name="active">#036E0E</color>
+
+
+
     <color name="bg_edit_text">#EFEFEF</color>
 </resources>

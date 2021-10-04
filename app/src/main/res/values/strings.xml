@@ -43,4 +43,16 @@
     <string name="success_register">Congratulation, your account has been register</string>
     <string name="success_forgot_pass">Congratulation, your link reset password has been sent to your email, please check it!</string>
     <string name="selamat_datang">Selamat Datang</string>
+
+    //Headings
+    <string name="heading_one">Mudah dan Cepat</string>
+    <string name="heading_two">Aman dan Terjamin</string>
+    <string name="heading_three">Bersih Total</string>
+    <string name="heading_fourth">Hasil Terjamin</string>
+
+    //Description
+    <string name="desc_one">Grow your Business By Accepting Card Payments with The New Card Reader</string>
+    <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
 </resources>

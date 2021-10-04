@@ -61,7 +61,7 @@ public class SignUp extends AppCompatActivity {
 
                 if (!fullname.equals("") && !username.equals("") && !password.equals("") && !email.equals("")) {
                     progressBar.setVisibility(View.VISIBLE);
-                    Handler handler = new Handler(Looper.getMainLooper());
+                    Handler handler = new Handler();
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
@@ -69,16 +69,16 @@ public class SignUp extends AppCompatActivity {
                             //Creating array for parameters
                             String[] field = new String[4];
                             field[0] = "fullname";
-                            field[1] = "email";
-                            field[2] = "username";
-                            field[3] = "password";
+                            field[1] = "username";
+                            field[2] = "password";
+                            field[3] = "email";
 
                             //Creating array for data
                             String[] data = new String[4];
                             data[0] = fullname;
-                            data[1] = email;
-                            data[2] = username;
-                            data[3] = password;
+                            data[1] = username;
+                            data[2] = password;
+                            data[3] = email;
 
                             PutData putData = new PutData("http://192.168.126.109/LogIn/signup.php", "POST", field, data);
                             if (putData.startPut()) {

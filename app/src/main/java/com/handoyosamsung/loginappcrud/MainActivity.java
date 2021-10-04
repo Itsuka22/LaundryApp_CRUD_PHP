@@ -16,8 +16,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.handoyosamsung.loginappcrud.API.APIRequestData;
 import com.handoyosamsung.loginappcrud.API.RetroServer;
 import com.handoyosamsung.loginappcrud.Adapter.AdapterData;
+import com.handoyosamsung.loginappcrud.Adapter.SliderAdapter;
 import com.handoyosamsung.loginappcrud.Model.DataModel;
 import com.handoyosamsung.loginappcrud.Model.ResponseModel;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fabTambah;
     TextView txt;
 
+    SliderView sliderView;
+    int[] images = {R.drawable.no1,
+            R.drawable.no2,
+            R.drawable.no6,
+            R.drawable.no3,
+            R.drawable.no5,
+            R.drawable.no4};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +58,17 @@ public class MainActivity extends AppCompatActivity {
         pbData = findViewById(R.id.pb_data);
         fabTambah = findViewById(R.id.fab_tambah);
         txt = findViewById(R.id.tv_name_user);
+
+
+        sliderView = findViewById(R.id.imageSlider);
+
+        SliderAdapter sliderAdapter = new SliderAdapter(images);
+
+        sliderView.setSliderAdapter(sliderAdapter);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+        sliderView.startAutoCycle();
+
 
 
         Intent intent = getIntent();

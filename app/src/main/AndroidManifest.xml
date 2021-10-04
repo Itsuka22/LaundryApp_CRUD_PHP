@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginAppCRUD"
         android:usesCleartextTraffic="true">
+<!--        <activity-->
+<!--            android:name=".SliderActivity"-->
+<!--            android:theme="@style/Theme.Design.Light.NoActionBar" />-->
         <activity
             android:name=".Login"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
@@ -28,7 +31,7 @@
             android:name=".SignUp"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".SliderActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
