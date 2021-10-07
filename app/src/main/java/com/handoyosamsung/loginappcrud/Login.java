@@ -2,7 +2,9 @@ package com.handoyosamsung.loginappcrud;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -21,6 +23,21 @@ public class Login extends AppCompatActivity {
     Button buttonRegister;
     Button buttonLogin;
     ProgressBar progressBar;
+    private static final String TAG = Login.class.getSimpleName();
+
+    private static final String TAG_SUCCESS = "success";
+    private static final String TAG_MESSAGE = "message";
+
+    public final static String TAG_USERNAME = "username";
+    public final static String TAG_ID = "id";
+
+    String tag_json_obj = "json_obj_req";
+
+    SharedPreferences sharedpreferences;
+    Boolean session = false;
+    String id, username;
+    public static final String my_shared_preferences = "my_shared_preferences";
+    public static final String session_status = "session_status";
 
 
     @Override
@@ -33,6 +50,17 @@ public class Login extends AppCompatActivity {
         buttonRegister = findViewById(R.id.btn_regist);
         buttonLogin = findViewById(R.id.btn_login);
         progressBar = findViewById(R.id.progress);
+        sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
+        session = sharedpreferences.getBoolean(session_status, false);
+        id = sharedpreferences.getString(TAG_ID, null);
+        username = sharedpreferences.getString(TAG_USERNAME, null);
+
+        if (session) {
+            Intent intent = new Intent(Login.this, MainActivity.class);
+            intent.putExtra(TAG_USERNAME, username);
+            finish();
+            startActivity(intent);
+        }
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override

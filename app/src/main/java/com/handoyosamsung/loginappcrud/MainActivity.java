@@ -5,9 +5,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar pbData;
     private FloatingActionButton fabTambah;
     TextView txt;
+    Button btn_logout;
+    TextView txt_id, txt_username;
+    String id, username;
+    SharedPreferences sharedpreferences;
+
+    public static final String TAG_ID = "id";
+    public static final String TAG_USERNAME = "username";
+
 
     SliderView sliderView;
     int[] images = {R.drawable.no1,
@@ -57,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         srlData = findViewById(R.id.srl_data);
         pbData = findViewById(R.id.pb_data);
         fabTambah = findViewById(R.id.fab_tambah);
-        txt = findViewById(R.id.tv_name_user);
+//        txt = findViewById(R.id.tv_name_user);
 
 
         sliderView = findViewById(R.id.imageSlider);
@@ -69,11 +80,33 @@ public class MainActivity extends AppCompatActivity {
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         sliderView.startAutoCycle();
 
+        txt_username = findViewById(R.id.tv_name_user);
+        btn_logout = findViewById(R.id.btn_logout);
+
+        sharedpreferences = getSharedPreferences(Login.my_shared_preferences, Context.MODE_PRIVATE);
 
 
-        Intent intent = getIntent();
-        String usename = intent.getStringExtra("username");
-        txt.setText(usename);
+        username = getIntent().getStringExtra("username");
+
+        txt_username.setText(username);
+
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putBoolean(Login.session_status, false);
+                editor.putString(TAG_USERNAME, null);
+                editor.commit();
+
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                finish();
+                startActivity(intent);
+            }
+        });
+
+//        Intent intent = getIntent();
+//        String usename = intent.getStringExtra("username");
+//        txt.setText(usename);
 
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);

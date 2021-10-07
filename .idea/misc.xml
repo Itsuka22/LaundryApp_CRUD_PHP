@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable-v24/bg_btn_auth_color_white.xml" value="0.15" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable-v24/bg_edit_text2.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable/bg_btn_auth_primary.xml" value="0.2712820512820513" />
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable/bg_edit_text.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/drawable/ic_add.xml" value="0.2755208333333333" />
@@ -12,7 +13,8 @@
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/font/poppins_bold.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/font/poppins_light.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_main.xml" value="0.136" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_login_shared.xml" value="0.259375" />
+        <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_sign_up.xml" value="0.23777173913043478" />
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_slider.xml" value="0.259375" />
         <entry key="..\:/Users/Handoyo/AndroidStudioProjects/LoginAppCRUD/app/src/main/res/layout/activity_splash.xml" value="0.2318840579710145" />
