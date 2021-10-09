@@ -79,7 +79,6 @@ public class Login extends AppCompatActivity {
                 username = String.valueOf(textInputEditTextUsername.getText());
                 password = String.valueOf(textInputEditTextPassword.getText());
 
-
                 if (!username.equals("") && !password.equals("") ) {
                     progressBar.setVisibility(View.VISIBLE);
                     Handler handler = new Handler(Looper.getMainLooper());
@@ -125,9 +124,11 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"All Field required", Toast.LENGTH_SHORT).show();
                 }
 
+                sharedpreferences.edit().putBoolean(Login.session_status, true).apply();
+
             }
         });
 
-
     }
+
 }

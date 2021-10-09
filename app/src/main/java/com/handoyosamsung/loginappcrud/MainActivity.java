@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putBoolean(Login.session_status, false);
                 editor.putString(TAG_USERNAME, null);
-                editor.commit();
+                editor.apply();
 
                 Intent intent = new Intent(MainActivity.this, Login.class);
                 finish();
