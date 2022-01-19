@@ -85,19 +85,19 @@ public class Login extends AppCompatActivity {
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            //Starting Write and Read data with URL
-                            //Creating array for parameters
+
                             String[] field = new String[2];
 
                             field[0] = "username";
                             field[1] = "password";
 
-                            //Creating array for data
+
                             String[] data = new String[2];
                             data[0] = username;
                             data[1] = password;
 
-                            PutData putData = new PutData("http://192.168.126.109/LogIn/login.php", "POST", field, data);
+//                          Sesuaikan ipv4 Address masing-masing lewat ipconfig
+                            PutData putData = new PutData("http://192.168.126.117/LogIn/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
@@ -114,7 +114,7 @@ public class Login extends AppCompatActivity {
                                     }
                                 }
                             }
-                            //End Write and Read data with URL
+
                         }
 
 

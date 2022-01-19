@@ -7,14 +7,10 @@ import android.os.Bundle;
 import android.os.Handler;
 
 public class SplashActivity extends AppCompatActivity {
-    /**
-     * Duration of wait
-     **/
+
     private final int SPLASH_DISPLAY_LENGTH = 2500;
 
-    /**
-     * Called when the activity is first created.
-     */
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);

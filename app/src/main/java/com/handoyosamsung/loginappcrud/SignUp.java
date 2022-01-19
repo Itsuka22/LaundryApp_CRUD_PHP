@@ -65,22 +65,22 @@ public class SignUp extends AppCompatActivity {
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            //Starting Write and Read data with URL
-                            //Creating array for parameters
+
                             String[] field = new String[4];
                             field[0] = "fullname";
                             field[1] = "username";
                             field[2] = "password";
                             field[3] = "email";
 
-                            //Creating array for data
+
                             String[] data = new String[4];
                             data[0] = fullname;
                             data[1] = username;
                             data[2] = password;
                             data[3] = email;
 
-                            PutData putData = new PutData("http://192.168.126.109/LogIn/signup.php", "POST", field, data);
+//                          Sesuaikan ipv4 Address masing-masing lewat ipconfig
+                            PutData putData = new PutData("http://192.168.126.117/LogIn/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
@@ -97,7 +97,7 @@ public class SignUp extends AppCompatActivity {
                                     }
                                 }
                             }
-                            //End Write and Read data with URL
+
                         }
 
 

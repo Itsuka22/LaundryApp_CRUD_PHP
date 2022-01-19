@@ -5,7 +5,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroServer {
-    private static final String baseURL = "http://192.168.126.109/LogIn/laundry/";
+    private static final String baseURL = "http://192.168.126.117/LogIn/laundry/";
     private static Retrofit retro;
 
     public static Retrofit konekRetrofit(){

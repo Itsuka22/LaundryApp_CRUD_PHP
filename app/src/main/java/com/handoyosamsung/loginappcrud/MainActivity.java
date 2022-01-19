@@ -52,12 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     SliderView sliderView;
-    int[] images = {R.drawable.no1,
-            R.drawable.no2,
-            R.drawable.no6,
-            R.drawable.no3,
-            R.drawable.no5,
-            R.drawable.no4};
+    int[] images = {R.drawable.gmbr1,
+            R.drawable.gmbr2,
+            R.drawable.gmbr3};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
